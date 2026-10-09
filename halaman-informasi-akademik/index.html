@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Halaman Informasi Akademik — portal informasi dan pengembangan mahasiswa. Jadwal, kalender akademik, pengumuman, dan inspirasi kehidupan kampus." />
+  <title>Beranda — Halaman Informasi Akademik</title>
+
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="shell header__inner">
+      <a class="brand" href="index.html" aria-label="Halaman Informasi Akademik, ke beranda">
+        <span class="brand__mark" aria-hidden="true">HIA</span>
+        <span class="brand__text">
+          <strong>Halaman Informasi</strong>
+          <span>Akademik</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="index.html" aria-current="page">Beranda</a></li>
+          <li><a class="nav__link" href="profil.html">Profil</a></li>
+          <li><a class="nav__link" href="akademik.html">Informasi Akademik</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__side">
+        <span class="term-badge">Sem. Ganjil · 2026/2027</span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Buka menu navigasi">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigasi seluler" hidden>
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="index.html" aria-current="page">Beranda</a></li>
+        <li><a class="mobile-nav__link" href="profil.html">Profil</a></li>
+        <li><a class="mobile-nav__link" href="akademik.html">Informasi Akademik</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="beranda">
+      <div class="hero__grid-lines" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="shell hero__grid">
+        <div class="hero__lead">
+          <p class="eyebrow eyebrow--light">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Portal Akademik &amp; Pengembangan Mahasiswa
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line"><span class="line__inner">Ruang untuk <span class="hl">Belajar</span>.</span></span>
+            <span class="line"><span class="line__inner">Tempat untuk <span class="hl">Bertumbuh</span>.</span></span>
+          </h1>
+
+          <p class="hero__text">
+            Temukan informasi akademik, persiapkan agenda perkuliahan, dan bangun
+            kebiasaan yang membantumu berkembang selama menjadi mahasiswa.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--lime" href="akademik.html">
+              <span>Jelajahi Informasi</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost" href="#kehidupan">Temukan Inspirasi</a>
+          </div>
+
+          <dl class="hero__stats" aria-label="Ringkasan singkat">
+            <div class="stat">
+              <dt>Pekan Aktif</dt>
+              <dd><span class="stat__num">07</span><span class="stat__unit">/16</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Agenda Pekan Ini</dt>
+              <dd><span class="stat__num">04</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Pengumuman Baru</dt>
+              <dd><span class="stat__num">12</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero__panel" aria-label="Agenda hari ini">
+          <div class="panel__head">
+            <span class="label">Agenda Hari Ini</span>
+            <span class="panel__date">Sen · 12 Okt</span>
+          </div>
+          <ol class="agenda">
+            <li class="agenda__item">
+              <span class="agenda__time">08.00</span>
+              <span class="agenda__body">
+                <strong>Pemrograman Web</strong>
+                <span>Lab Komputer 3 · R.204</span>
+              </span>
+              <span class="agenda__tag agenda__tag--class">Kuliah</span>
+            </li>
+            <li class="agenda__item">
+              <span class="agenda__time">11.30</span>
+              <span class="agenda__body">
+                <strong>Bimbingan Tugas Akhir</strong>
+                <span>Ruang Dosen · Blok B</span>
+              </span>
+              <span class="agenda__tag agenda__tag--meet">Bimbingan</span>
+            </li>
+            <li class="agenda__item">
+              <span class="agenda__time">15.00</span>
+              <span class="agenda__body">
+                <strong>Diskusi Unit Kegiatan</strong>
+                <span>Student Center · Lantai 2</span>
+              </span>
+              <span class="agenda__tag agenda__tag--org">Kegiatan</span>
+            </li>
+          </ol>
+          <a class="panel__foot" href="akademik.html">
+            <span>Lihat jadwal lengkap</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SEKILAS AKADEMIK ============ -->
+    <section class="section" id="sekilas" aria-labelledby="sekilas-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Sekilas Akademik</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="sekilas-title">
+              Gambaran singkat sebelum masuk ke detail.
+            </h2>
+            <p class="section__sub">
+              Empat angka ini merangkum ritme satu semester. Rincian jadwal dan
+              tenggat tersedia di halaman Informasi Akademik.
+            </p>
+          </div>
+        </header>
+
+        <div class="facts" data-reveal-group>
+          <article class="fact fact--dark" data-reveal>
+            <span class="fact__num">07<span class="stat__unit">/16</span></span>
+            <span class="fact__label">Pekan Aktif</span>
+            <p class="fact__text">Posisi perkuliahan saat ini dalam satu semester.</p>
+          </article>
+          <article class="fact" data-reveal>
+            <span class="fact__num">04</span>
+            <span class="fact__label">Agenda Pekan Ini</span>
+            <p class="fact__text">Kuliah, bimbingan, dan kegiatan mahasiswa.</p>
+          </article>
+          <article class="fact" data-reveal>
+            <span class="fact__num">20 Okt</span>
+            <span class="fact__label">UTS Dimulai</span>
+            <p class="fact__text">Gelombang pertama ujian tengah semester.</p>
+          </article>
+          <article class="fact" data-reveal>
+            <span class="fact__num">12</span>
+            <span class="fact__label">Pengumuman Baru</span>
+            <p class="fact__text">Diperbarui sepanjang pekan berjalan.</p>
+          </article>
+        </div>
+
+        <div class="section-cta" data-reveal>
+          <a class="link-arrow" href="akademik.html">
+            <span>Buka halaman Informasi Akademik</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PENGUMUMAN TERBARU (PREVIEW) ============ -->
+    <section class="section section--paper" id="pengumuman" aria-labelledby="pengumuman-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Pengumuman Terbaru</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="pengumuman-title">
+              Berita singkat dari ruang akademik kampus.
+            </h2>
+            <p class="section__sub">
+              Pratinjau singkat. Daftar lengkap dengan filter kategori ada di
+              halaman Informasi Akademik.
+            </p>
+          </div>
+        </header>
+
+        <div class="editorial">
+          <article class="feature" data-category="akademik" data-reveal="mask">
+            <div class="feature__visual" aria-hidden="true">
+              <svg viewBox="0 0 420 300" role="img" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1B4332" />
+                    <stop offset="1" stop-color="#12372A" />
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="300" fill="url(#sky)" />
+                <circle cx="330" cy="70" r="46" fill="#C6F36B" opacity="0.9" />
+                <rect x="0" y="200" width="420" height="100" fill="#0E2A20" />
+                <rect x="40" y="150" width="120" height="50" fill="#F7F8F2" opacity="0.12" />
+                <rect x="40" y="150" width="120" height="50" fill="none" stroke="#C6F36B" stroke-width="2" opacity="0.5" />
+                <rect x="200" y="120" width="90" height="80" fill="#F7F8F2" opacity="0.1" />
+                <rect x="200" y="120" width="90" height="80" fill="none" stroke="#C6F36B" stroke-width="2" opacity="0.35" />
+                <rect x="320" y="170" width="70" height="30" fill="#C6F36B" opacity="0.85" />
+                <circle cx="120" cy="175" r="14" fill="#C6F36B" />
+                <rect x="112" y="188" width="16" height="26" rx="6" fill="#C6F36B" />
+                <circle cx="245" cy="150" r="12" fill="#F7F8F2" opacity="0.85" />
+                <rect x="238" y="162" width="14" height="24" rx="5" fill="#F7F8F2" opacity="0.85" />
+              </svg>
+              <span class="feature__badge">Sorotan</span>
+            </div>
+            <div class="feature__body">
+              <div class="feature__meta">
+                <span class="chip chip--akademik">Akademik</span>
+                <time datetime="2026-10-11">11 Oktober 2026</time>
+              </div>
+              <h3 class="feature__title">
+                Panduan menyusun rencana studi yang realistis untuk satu semester
+              </h3>
+              <p class="feature__desc">
+                Menyusun beban SKS bukan soal mengambil sebanyak mungkin. Pelajari
+                cara menyeimbangkan mata kuliah, kegiatan, dan waktu istirahat agar
+                ritme belajar tetap terjaga.
+              </p>
+              <a class="link-arrow" href="akademik.html">
+                <span>Baca di halaman akademik</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <div class="editorial__list" data-reveal-group>
+            <article class="post" data-reveal>
+              <time class="post__date" datetime="2026-10-10">10 Okt</time>
+              <div class="post__body">
+                <span class="chip chip--beasiswa">Beasiswa</span>
+                <h3 class="post__title">Beasiswa prestasi akademik dibuka hingga akhir bulan</h3>
+                <p class="post__desc">Persiapkan transkrip dan esai motivasi sebelum tenggat.</p>
+              </div>
+              <span class="arrow post__arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="post" data-reveal>
+              <time class="post__date" datetime="2026-10-09">09 Okt</time>
+              <div class="post__body">
+                <span class="chip chip--kegiatan">Kegiatan</span>
+                <h3 class="post__title">Pekan olahraga antar jurusan kembali digelar</h3>
+                <p class="post__desc">Pendaftaran tim per angkatan dibuka di Student Center.</p>
+              </div>
+              <span class="arrow post__arrow" aria-hidden="true">→</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-cta" data-reveal>
+          <a class="link-arrow" href="akademik.html">
+            <span>Lihat semua pengumuman &amp; jadwal</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STUDENT LIFE ============ -->
+    <section class="section" id="kehidupan" aria-labelledby="kehidupan-title">
+      <div class="shell">
+        <header class="section__head section__head--split" data-reveal>
+          <div>
+            <p class="eyebrow">Kehidupan Mahasiswa</p>
+            <h2 class="section__title" id="kehidupan-title">
+              Kuliah hanyalah satu bagian dari cerita.
+            </h2>
+          </div>
+          <p class="section__sub">
+            Kebiasaan kecil di luar kelas sering kali yang paling menentukan
+            bagaimana kamu menjalani satu semester.
+          </p>
+        </header>
+
+        <ol class="life-list" data-reveal-group>
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">01</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Atur waktu kuliah dan kegiatan lain</h3>
+              <p class="life-item__desc">
+                Blokir waktu untuk kelas, organisasi, dan istirahat di kalender yang
+                sama. Yang terlihat di satu tempat lebih mudah dijaga.
+              </p>
+            </div>
+            <span class="life-item__tag">Manajemen Waktu</span>
+          </li>
+
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">02</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Bangun kebiasaan belajar yang konsisten</h3>
+              <p class="life-item__desc">
+                Belajar 45 menit setiap hari biasanya lebih tahan lama daripada
+                menumpuk semuanya dalam satu malam sebelum ujian.
+              </p>
+            </div>
+            <span class="life-item__tag">Kebiasaan</span>
+          </li>
+
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">03</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Ikut kegiatan organisasi dengan sadar</h3>
+              <p class="life-item__desc">
+                Pilih satu atau dua peran yang benar-benar kamu nikmati, lalu
+                berkomitmen penuh alih-alih hadir di banyak tempat setengah jalan.
+              </p>
+            </div>
+            <span class="life-item__tag">Organisasi</span>
+          </li>
+
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">04</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Asah keterampilan di luar materi kelas</h3>
+              <p class="life-item__desc">
+                Ikuti satu proyek, lomba, atau kursus singkat tiap semester agar
+                portofoliomu tumbuh seiring waktu.
+              </p>
+            </div>
+            <span class="life-item__tag">Pengembangan</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ MOTIVATION SPOTLIGHT ============ -->
+    <section class="spotlight" aria-labelledby="spotlight-title">
+      <div class="shell spotlight__inner" data-reveal-group>
+        <p class="eyebrow eyebrow--light" data-reveal>Motivation Spotlight</p>
+        <blockquote class="spotlight__quote" id="spotlight-title" data-reveal>
+          <p>
+            “Kamu tidak harus menyelesaikan semuanya hari ini.
+            <span class="hl">Mulai dari satu hal</span> yang bisa kamu lakukan sekarang.”
+          </p>
+        </blockquote>
+        <div class="spotlight__foot" data-reveal>
+          <span class="spotlight__mark" aria-hidden="true">01 / 16</span>
+          <p class="spotlight__note">
+            Satu tugas, satu bab, satu langkah. Kemajuan kecil tetap kemajuan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PENGEMBANGAN DIRI ============ -->
+    <section class="section section--paper" id="pengembangan" aria-labelledby="pengembangan-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Pengembangan Diri</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="pengembangan-title">
+              Sumber untuk bertumbuh, bukan sekadar lulus.
+            </h2>
+            <p class="section__sub">
+              Empat arah pengembangan yang bisa kamu mulai kapan saja, sesuai
+              ritme dan minatmu.
+            </p>
+          </div>
+        </header>
+
+        <div class="growth" data-reveal-group>
+          <article class="growth-card growth-card--lg" data-reveal>
+            <span class="growth-card__tag">Tips Belajar</span>
+            <h3 class="growth-card__title">Belajar efektif dengan teknik jeda dan pengulangan</h3>
+            <p class="growth-card__desc">
+              Teknik recall dan jeda belajar membantu otak menyimpan materi lebih
+              lama dibanding membaca ulang tanpa jeda.
+            </p>
+            <a class="link-arrow" href="akademik.html">
+              <span>Lihat panduan akademik</span><span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="growth-card" data-reveal>
+            <span class="growth-card__tag">Karier</span>
+            <h3 class="growth-card__title">Menyiapkan diri untuk magang pertama</h3>
+            <p class="growth-card__desc">Rapikan CV, pahami peran, dan latih cara bercerita.</p>
+          </article>
+
+          <article class="growth-card" data-reveal>
+            <span class="growth-card__tag">Keterampilan Digital</span>
+            <h3 class="growth-card__title">Mengenal tools kolaborasi dan produktivitas</h3>
+            <p class="growth-card__desc">Kuasai alat kerja tim yang umum dipakai industri.</p>
+          </article>
+
+          <article class="growth-card growth-card--accent" data-reveal>
+            <span class="growth-card__tag">Kegiatan Kampus</span>
+            <h3 class="growth-card__title">Memilih kegiatan yang selaras dengan tujuanmu</h3>
+            <p class="growth-card__desc">
+              Ukur tiap kegiatan dari keterampilan dan relasi yang kamu bawa
+              keluar dari sana.
+            </p>
+            <a class="link-arrow link-arrow--dark" href="profil.html">
+              <span>Tentang website ini</span><span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-labelledby="home-cta-title">
+      <div class="shell cta-band__inner" data-reveal>
+        <div>
+          <p class="eyebrow cta-band__eyebrow">Lanjut Menjelajah</p>
+          <h2 class="cta-band__title" id="home-cta-title">Kenali ruang belajar ini lebih dekat.</h2>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--lime" href="akademik.html">Informasi Akademik</a>
+          <a class="btn btn--ghost" href="profil.html">Lihat Profil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="tentang">
+    <div class="shell footer__inner" data-reveal-group>
+      <div class="footer__brand" data-reveal>
+        <a class="brand brand--footer" href="index.html" aria-label="Halaman Informasi Akademik, ke beranda">
+          <span class="brand__mark" aria-hidden="true">HIA</span>
+          <span class="brand__text">
+            <strong>Halaman Informasi</strong>
+            <span>Akademik</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          Portal yang menggabungkan informasi akademik dan inspirasi kehidupan
+          mahasiswa dalam satu ruang yang terstruktur.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigasi footer" data-reveal>
+        <h2 class="footer__heading">Halaman</h2>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="akademik.html">Informasi Akademik</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__meta" data-reveal>
+        <h2 class="footer__heading">Catatan Proyek</h2>
+        <p>
+          Website ini merupakan proyek akademik untuk mata kuliah
+          Rekayasa Web. Seluruh data jadwal, tanggal, dan pengumuman
+          bersifat contoh.
+        </p>
+        <p class="footer__credit">Student Life Editorial · 2026</p>
+      </div>
+    </div>
+    <div class="shell footer__bottom">
+      <span>© 2026 Halaman Informasi Akademik</span>
+      <span>Dibangun dengan HTML, CSS, dan JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profil Halaman Informasi Akademik — identitas, latar belakang, tujuan, sasaran pengguna, fitur, dan prinsip desain website Student Life." />
+  <title>Profil — Halaman Informasi Akademik</title>
+
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-profile has-rail">
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="shell header__inner">
+      <a class="brand" href="index.html" aria-label="Halaman Informasi Akademik, ke beranda">
+        <span class="brand__mark" aria-hidden="true">HIA</span>
+        <span class="brand__text">
+          <strong>Halaman Informasi</strong>
+          <span>Akademik</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Beranda</a></li>
+          <li><a class="nav__link is-active" href="profil.html" aria-current="page">Profil</a></li>
+          <li><a class="nav__link" href="akademik.html">Informasi Akademik</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__side">
+        <span class="term-badge">Sem. Ganjil · 2026/2027</span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Buka menu navigasi">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigasi seluler" hidden>
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="index.html">Beranda</a></li>
+        <li><a class="mobile-nav__link" href="profil.html" aria-current="page">Profil</a></li>
+        <li><a class="mobile-nav__link" href="akademik.html">Informasi Akademik</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten">
+
+    <!-- ============ HERO PROFIL ============ -->
+    <section class="hero hero--page hero--center" id="hero-profil">
+      <div class="hero__grid-lines" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="shell hero__grid">
+        <div class="hero__lead">
+          <p class="eyebrow eyebrow--light">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Profil Website
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line"><span class="line__inner">Tentang Ruang <span class="hl">Belajar</span> Ini.</span></span>
+          </h1>
+
+          <p class="hero__text">
+            Halaman Informasi Akademik adalah proyek akademik yang merangkum
+            informasi perkuliahan dan kehidupan mahasiswa dalam satu pengalaman
+            editorial yang terstruktur.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--lime" href="akademik.html">
+              <span>Lihat Informasi Akademik</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost" href="#tujuan">Baca Tujuan Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION RAIL ============ -->
+    <nav class="section-rail" aria-label="Navigasi bagian halaman profil" data-rail>
+      <div class="shell">
+        <ul class="section-rail__list">
+          <li><a class="section-rail__link is-active" href="#tentang">Tentang</a></li>
+          <li><a class="section-rail__link" href="#latar">Latar Belakang</a></li>
+          <li><a class="section-rail__link" href="#tujuan">Tujuan</a></li>
+          <li><a class="section-rail__link" href="#pengguna">Sasaran Pengguna</a></li>
+          <li><a class="section-rail__link" href="#fitur">Fitur</a></li>
+          <li><a class="section-rail__link" href="#prinsip">Prinsip Desain</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ============ TENTANG ============ -->
+    <section class="section" id="tentang" aria-labelledby="tentang-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Apa Itu Halaman Ini</p>
+          <h2 class="section__title" id="tentang-title">
+            Satu ruang untuk informasi kuliah dan cara menjalaninya.
+          </h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="prose" data-reveal>
+            <p class="lead">
+              Halaman Informasi Akademik menggabungkan dua hal yang biasanya
+              terpisah: data akademik yang perlu ditemukan cepat, dan dorongan
+              untuk menjalani kehidupan kampus dengan lebih terarah.
+            </p>
+            <p>
+              Alih-alih menyajikan daftar panjang yang membingungkan, halaman ini
+              menata jadwal, kalender, pengumuman, dan tenggat dengan penanda
+              kategori serta tanggal yang mudah dipindai.
+            </p>
+            <p>
+              Di sisi lain, bagian kehidupan mahasiswa dan pengembangan diri
+              memberi ruang untuk hal-hal yang tidak muncul di kalender resmi —
+              kebiasaan belajar, pengelolaan waktu, dan pemilihan kegiatan.
+            </p>
+          </div>
+
+          <aside class="info-panel" data-reveal="right" aria-label="Ringkasan proyek">
+            <h3 class="info-panel__title">Ringkasan Proyek</h3>
+            <div class="info-panel__row">
+              <span class="info-panel__label">Nama</span>
+              <span class="info-panel__value">Halaman Informasi Akademik</span>
+            </div>
+            <div class="info-panel__row">
+              <span class="info-panel__label">Konsep</span>
+              <span class="info-panel__value">Student Life Editorial</span>
+            </div>
+            <div class="info-panel__row">
+              <span class="info-panel__label">Jumlah Halaman</span>
+              <span class="info-panel__value">3 Halaman HTML</span>
+            </div>
+            <div class="info-panel__row">
+              <span class="info-panel__label">Teknologi</span>
+              <span class="info-panel__value">HTML · CSS · Vanilla JS</span>
+            </div>
+            <div class="info-panel__row">
+              <span class="info-panel__label">Jenis Data</span>
+              <span class="info-panel__value">Simulasi tugas kuliah</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LATAR BELAKANG ============ -->
+    <section class="section section--paper" id="latar" aria-labelledby="latar-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Latar Belakang</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="latar-title">
+              Mengapa website ini dibuat.
+            </h2>
+            <p class="section__sub">
+              Informasi akademik sering tersebar di banyak tempat dan disampaikan
+              dengan gaya yang kaku.
+            </p>
+          </div>
+        </header>
+
+        <div class="prose" data-reveal>
+          <p>
+            Mahasiswa perlu berpindah antara beberapa sumber hanya untuk mengetahui
+            jadwal, batas pengisian rencana studi, dan tanggal ujian. Ketika
+            informasinya sulit dipindai, tenggat mudah terlewat.
+          </p>
+          <p>
+            Website ini dibuat sebagai eksperimen desain untuk mengubah cara
+            informasi tersebut disajikan: <strong>terstruktur, mudah ditemukan, dan
+            tidak melelahkan untuk dibaca.</strong> Pendekatan editorial dipilih agar
+            halaman terasa seperti bacaan kampus, bukan panel administrasi.
+          </p>
+          <p>
+            Proyek ini dikerjakan sebagai bagian dari mata kuliah Rekayasa Web.
+            Karena itu, seluruh jadwal dan pengumuman yang ditampilkan bersifat
+            contoh dan bukan data resmi perguruan tinggi mana pun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TUJUAN ============ -->
+    <section class="section" id="tujuan" aria-labelledby="tujuan-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Tujuan</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="tujuan-title">
+              Empat hal yang ingin dicapai halaman ini.
+            </h2>
+            <p class="section__sub">
+              Setiap tujuan diterjemahkan menjadi bagian nyata di dalam website,
+              bukan sekadar wacana.
+            </p>
+          </div>
+        </header>
+
+        <div class="goals" data-reveal-group>
+          <article class="goal-card" data-reveal>
+            <span class="goal-card__index" aria-hidden="true">01</span>
+            <h3 class="goal-card__title">Akses informasi akademik</h3>
+            <p class="goal-card__desc">Membantu mahasiswa menemukan jadwal dan pengumuman dengan cepat.</p>
+          </article>
+          <article class="goal-card" data-reveal>
+            <span class="goal-card__index" aria-hidden="true">02</span>
+            <h3 class="goal-card__title">Kelola agenda &amp; tenggat</h3>
+            <p class="goal-card__desc">Menyajikan tenggat penting agar tidak mudah terlewat.</p>
+          </article>
+          <article class="goal-card" data-reveal>
+            <span class="goal-card__index" aria-hidden="true">03</span>
+            <h3 class="goal-card__title">Dorong pengembangan diri</h3>
+            <p class="goal-card__desc">Menyediakan arah belajar, karier, dan keterampilan.</p>
+          </article>
+          <article class="goal-card" data-reveal>
+            <span class="goal-card__index" aria-hidden="true">04</span>
+            <h3 class="goal-card__title">Jaga keseimbangan</h3>
+            <p class="goal-card__desc">Mendorong keseimbangan antara akademik dan kehidupan kampus.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SASARAN PENGGUNA ============ -->
+    <section class="section section--paper" id="pengguna" aria-labelledby="pengguna-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Sasaran Pengguna</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="pengguna-title">
+              Untuk siapa website ini dirancang.
+            </h2>
+            <p class="section__sub">
+              Fokus utamanya adalah mahasiswa, dengan kebutuhan yang berbeda di
+              tiap tahap perkuliahan.
+            </p>
+          </div>
+        </header>
+
+        <div class="audience" data-reveal-group>
+          <article class="audience__item" data-reveal>
+            <span class="audience__mark">Mahasiswa Baru</span>
+            <div>
+              <h3 class="audience__title">Baru menyesuaikan diri</h3>
+              <p class="audience__desc">Butuh gambaran besar ritme semester dan kebiasaan belajar yang sehat.</p>
+            </div>
+          </article>
+          <article class="audience__item" data-reveal>
+            <span class="audience__mark">Mahasiswa Aktif</span>
+            <div>
+              <h3 class="audience__title">Menjalani banyak peran</h3>
+              <p class="audience__desc">Perlu mengatur waktu antara kuliah, organisasi, dan kegiatan lain.</p>
+            </div>
+          </article>
+          <article class="audience__item" data-reveal>
+            <span class="audience__mark">Tingkat Akhir</span>
+            <div>
+              <h3 class="audience__title">Menyiapkan langkah lanjut</h3>
+              <p class="audience__desc">Mencari informasi magang, karier, dan pengembangan keterampilan.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FITUR ============ -->
+    <section class="section" id="fitur" aria-labelledby="fitur-title">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Fitur Utama</p>
+          <div class="section__head-grid">
+            <h2 class="section__title" id="fitur-title">
+              Yang bisa kamu lakukan di sini.
+            </h2>
+            <p class="section__sub">
+              Fitur ditambahkan hanya ketika membantu menemukan atau memahami
+              informasi.
+            </p>
+          </div>
+        </header>
+
+        <div class="features" data-reveal-group>
+          <article class="feature-item" data-reveal>
+            <h3 class="feature-item__title">Kalender akademik</h3>
+            <p class="feature-item__desc">Timeline fase semester dari registrasi hingga ujian akhir.</p>
+          </article>
+          <article class="feature-item" data-reveal>
+            <h3 class="feature-item__title">Jadwal &amp; agenda</h3>
+            <p class="feature-item__desc">Daftar sesi kuliah, praktikum, dan bimbingan dalam satu tampilan.</p>
+          </article>
+          <article class="feature-item" data-reveal>
+            <h3 class="feature-item__title">Filter pengumuman</h3>
+            <p class="feature-item__desc">Menyaring informasi berdasarkan kategori secara langsung.</p>
+          </article>
+          <article class="feature-item" data-reveal>
+            <h3 class="feature-item__title">Penanda tenggat</h3>
+            <p class="feature-item__desc">Batas waktu penting ditandai agar lebih mudah diperhatikan.</p>
+          </article>
+          <article class="feature-item" data-reveal>
+            <h3 class="feature-item__title">Konten motivasi</h3>
+            <p class="feature-item__desc">Jeda editorial yang memberi dorongan di tengah rutinitas.</p>
+          </article>
+          <article class="feature-item" data-reveal>
+            <h3 class="feature-item__title">Navigasi antarhalaman</h3>
+            <p class="feature-item__desc">Perpindahan antara Beranda, Profil, dan Akademik yang konsisten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRINSIP DESAIN ============ -->
+    <section class="section section--paper" id="prinsip" aria-labelledby="prinsip-title">
+      <div class="shell">
+        <header class="section__head section__head--split" data-reveal>
+          <div>
+            <p class="eyebrow">Prinsip Desain</p>
+            <h2 class="section__title" id="prinsip-title">
+              Aturan yang menjaga tampilan tetap konsisten.
+            </h2>
+          </div>
+          <p class="section__sub">
+            Prinsip ini diterapkan pada warna, tipografi, komponen, dan interaksi
+            di seluruh halaman.
+          </p>
+        </header>
+
+        <ol class="life-list" data-reveal-group>
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">01</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Kejelasan informasi</h3>
+              <p class="life-item__desc">Materi terpenting muncul lebih dulu dengan hierarki yang tegas.</p>
+            </div>
+            <span class="life-item__tag">Hierarchy</span>
+          </li>
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">02</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Konsistensi visual</h3>
+              <p class="life-item__desc">Palet, tipografi, dan komponen yang sama di setiap halaman.</p>
+            </div>
+            <span class="life-item__tag">Consistency</span>
+          </li>
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">03</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Kemudahan navigasi</h3>
+              <p class="life-item__desc">Menu aktif yang jelas dan perpindahan halaman yang sederhana.</p>
+            </div>
+            <span class="life-item__tag">Navigation</span>
+          </li>
+          <li class="life-item" data-reveal>
+            <span class="life-item__index" aria-hidden="true">04</span>
+            <div class="life-item__content">
+              <h3 class="life-item__title">Aksesibilitas</h3>
+              <p class="life-item__desc">Kontras memadai, fokus keyboard terlihat, dan dukungan reduced motion.</p>
+            </div>
+            <span class="life-item__tag">Accessibility</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-labelledby="profil-cta-title">
+      <div class="shell cta-band__inner" data-reveal>
+        <div>
+          <p class="eyebrow cta-band__eyebrow">Langkah Berikutnya</p>
+          <h2 class="cta-band__title" id="profil-cta-title">Siap merencanakan semestermu?</h2>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--lime" href="akademik.html">Buka Informasi Akademik</a>
+          <a class="btn btn--ghost" href="index.html">Kembali ke Beranda</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="tentang-footer">
+    <div class="shell footer__inner" data-reveal-group>
+      <div class="footer__brand" data-reveal>
+        <a class="brand brand--footer" href="index.html" aria-label="Halaman Informasi Akademik, ke beranda">
+          <span class="brand__mark" aria-hidden="true">HIA</span>
+          <span class="brand__text">
+            <strong>Halaman Informasi</strong>
+            <span>Akademik</span>
+          </span>
+        </a>
+        <p class="footer__desc">
+          Portal yang menggabungkan informasi akademik dan inspirasi kehidupan
+          mahasiswa dalam satu ruang yang terstruktur.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigasi footer" data-reveal>
+        <h2 class="footer__heading">Halaman</h2>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="akademik.html">Informasi Akademik</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__meta" data-reveal>
+        <h2 class="footer__heading">Catatan Proyek</h2>
+        <p>
+          Website ini merupakan proyek akademik untuk mata kuliah
+          Rekayasa Web. Seluruh data jadwal, tanggal, dan pengumuman
+          bersifat contoh.
+        </p>
+        <p class="footer__credit">Student Life Editorial · 2026</p>
+      </div>
+    </div>
+    <div class="shell footer__bottom">
+      <span>© 2026 Halaman Informasi Akademik</span>
+      <span>Dibangun dengan HTML, CSS, dan JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
