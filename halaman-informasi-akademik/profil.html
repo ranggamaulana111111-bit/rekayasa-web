@@ -6,12 +6,13 @@
   <meta name="description" content="Profil Halaman Informasi Akademik — identitas, latar belakang, tujuan, sasaran pengguna, fitur, dan prinsip desain website Student Life." />
   <title>Profil — Halaman Informasi Akademik</title>
 
-  <script>document.documentElement.classList.add("js");</script>
+  <script>document.documentElement.classList.add("js");window.__hiaRevealGuard=window.setTimeout(function(){document.documentElement.classList.add("no-reveal");},2500);</script>
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="page-profile has-rail">
@@ -58,8 +59,12 @@
 
     <!-- ============ HERO PROFIL ============ -->
     <section class="hero hero--page hero--center" id="hero-profil">
-      <div class="hero__grid-lines" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="hero__folio">
+          <span>Profil · Vol. 01</span>
+          <span>Student Life Editorial</span>
+        </div>
+      </div>
       <div class="shell hero__grid">
         <div class="hero__lead">
           <p class="eyebrow eyebrow--light">
@@ -80,9 +85,12 @@
           <div class="hero__actions">
             <a class="btn btn--lime" href="akademik.html">
               <span>Lihat Informasi Akademik</span>
-              <span class="btn__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right btn__arrow" aria-hidden="true"></i>
             </a>
-            <a class="btn btn--ghost" href="#tujuan">Baca Tujuan Kami</a>
+            <a class="link-arrow link-arrow--light" href="#tujuan">
+              <span>Baca Tujuan Kami</span>
+              <i class="mdi mdi-arrow-right arrow" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -296,26 +304,32 @@
 
         <div class="features" data-reveal-group>
           <article class="feature-item" data-reveal>
+            <i class="mdi mdi-calendar-month-outline feature-item__icon" aria-hidden="true"></i>
             <h3 class="feature-item__title">Kalender akademik</h3>
             <p class="feature-item__desc">Timeline fase semester dari registrasi hingga ujian akhir.</p>
           </article>
           <article class="feature-item" data-reveal>
+            <i class="mdi mdi-calendar-clock feature-item__icon" aria-hidden="true"></i>
             <h3 class="feature-item__title">Jadwal &amp; agenda</h3>
             <p class="feature-item__desc">Daftar sesi kuliah, praktikum, dan bimbingan dalam satu tampilan.</p>
           </article>
           <article class="feature-item" data-reveal>
+            <i class="mdi mdi-filter-variant feature-item__icon" aria-hidden="true"></i>
             <h3 class="feature-item__title">Filter pengumuman</h3>
             <p class="feature-item__desc">Menyaring informasi berdasarkan kategori secara langsung.</p>
           </article>
           <article class="feature-item" data-reveal>
+            <i class="mdi mdi-alarm feature-item__icon" aria-hidden="true"></i>
             <h3 class="feature-item__title">Penanda tenggat</h3>
             <p class="feature-item__desc">Batas waktu penting ditandai agar lebih mudah diperhatikan.</p>
           </article>
           <article class="feature-item" data-reveal>
+            <i class="mdi mdi-lightbulb-on-outline feature-item__icon" aria-hidden="true"></i>
             <h3 class="feature-item__title">Konten motivasi</h3>
             <p class="feature-item__desc">Jeda editorial yang memberi dorongan di tengah rutinitas.</p>
           </article>
           <article class="feature-item" data-reveal>
+            <i class="mdi mdi-compass-outline feature-item__icon" aria-hidden="true"></i>
             <h3 class="feature-item__title">Navigasi antarhalaman</h3>
             <p class="feature-item__desc">Perpindahan antara Beranda, Profil, dan Akademik yang konsisten.</p>
           </article>

@@ -13,6 +13,9 @@
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Stop the no-reveal safety net: the main script initialised fine.
+  window.clearTimeout(window.__hiaRevealGuard);
+
   /* ---------------------------------------------------------------
      1. Mobile navigation
      --------------------------------------------------------------- */
@@ -47,7 +50,7 @@
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 1080) closeMobileNav();
+      if (window.innerWidth > 900) closeMobileNav();
     });
   }
 
@@ -159,7 +162,7 @@
     function (group) {
       var kids = group.querySelectorAll(":scope > [data-reveal]");
       Array.prototype.forEach.call(kids, function (el, i) {
-        el.style.setProperty("--reveal-delay", Math.min(i * 70, 420) + "ms");
+        el.style.setProperty("--reveal-delay", Math.min(i * 55, 275) + "ms");
       });
     }
   );
@@ -229,6 +232,9 @@
 
       if (show) {
         item.hidden = false;
+        // If the item was never scrolled into view, make sure it cannot
+        // stay invisible at CSS level after the JS entrance finishes.
+        item.classList.add("is-visible", "reveal-done");
         visibleCount++;
         if (!reduceMotion) {
           item.animate(
@@ -275,6 +281,23 @@
   }
 
   if (filterButtons.length && filterItems.length) {
+    var editorialGrid = document.querySelector(".editorial");
+    var featureCard = editorialGrid ? editorialGrid.querySelector(".feature") : null;
+
+    function syncEditorialLayout() {
+      if (editorialGrid && featureCard) {
+        // Base it on the active filter, not the (async) hidden attribute.
+        var activeBtn = document.querySelector(".filter__btn.is-active");
+        var filter = activeBtn ? activeBtn.getAttribute("data-filter") : "all";
+        var show =
+          filter === "all" ||
+          featureCard.getAttribute("data-category") === filter;
+        editorialGrid.classList.toggle("editorial--solo", !show);
+      }
+    }
+
+    syncEditorialLayout();
+
     filterButtons.forEach(function (button) {
       button.addEventListener("click", function () {
         var filter = button.getAttribute("data-filter");
@@ -286,6 +309,7 @@
         });
 
         applyFilter(filter);
+        syncEditorialLayout();
       });
     });
   }

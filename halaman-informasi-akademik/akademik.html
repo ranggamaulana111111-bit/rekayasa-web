@@ -6,12 +6,13 @@
   <meta name="description" content="Informasi Akademik — kalender akademik, jadwal dan agenda, pengumuman terbaru, serta tenggat penting mahasiswa. Data simulasi untuk tugas kuliah." />
   <title>Informasi Akademik — Halaman Informasi Akademik</title>
 
-  <script>document.documentElement.classList.add("js");</script>
+  <script>document.documentElement.classList.add("js");window.__hiaRevealGuard=window.setTimeout(function(){document.documentElement.classList.add("no-reveal");},2500);</script>
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="page-academic has-rail">
@@ -58,8 +59,12 @@
 
     <!-- ============ HERO AKADEMIK ============ -->
     <section class="hero hero--page hero--center" id="hero-akademik">
-      <div class="hero__grid-lines" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="hero__folio">
+          <span>Informasi Akademik · Vol. 01</span>
+          <span>Pekan 07 · dari 16</span>
+        </div>
+      </div>
       <div class="shell hero__grid">
         <div class="hero__lead">
           <p class="eyebrow eyebrow--light">
@@ -80,9 +85,12 @@
           <div class="hero__actions">
             <a class="btn btn--lime" href="#pengumuman">
               <span>Lihat Pengumuman</span>
-              <span class="btn__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right btn__arrow" aria-hidden="true"></i>
             </a>
-            <a class="btn btn--ghost" href="index.html">Kembali ke Beranda</a>
+            <a class="link-arrow link-arrow--light" href="index.html">
+              <span>Kembali ke Beranda</span>
+              <i class="mdi mdi-arrow-right arrow" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -229,6 +237,12 @@
         </header>
 
         <div class="schedule" data-reveal-group>
+          <div class="schedule__head">
+            <span>Hari · Jam</span>
+            <span>Mata Kuliah</span>
+            <span>Ruang</span>
+            <span>Jenis</span>
+          </div>
           <article class="schedule__row" data-reveal>
             <span class="schedule__when">
               <span class="schedule__day">Senin</span>
@@ -319,26 +333,7 @@
           <!-- Sorotan utama -->
           <article class="feature" data-category="akademik" data-reveal="mask">
             <div class="feature__visual" aria-hidden="true">
-              <svg viewBox="0 0 420 300" role="img" aria-hidden="true" focusable="false">
-                <defs>
-                  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#1B4332" />
-                    <stop offset="1" stop-color="#12372A" />
-                  </linearGradient>
-                </defs>
-                <rect width="420" height="300" fill="url(#sky)" />
-                <circle cx="330" cy="70" r="46" fill="#C6F36B" opacity="0.9" />
-                <rect x="0" y="200" width="420" height="100" fill="#0E2A20" />
-                <rect x="40" y="150" width="120" height="50" fill="#F7F8F2" opacity="0.12" />
-                <rect x="40" y="150" width="120" height="50" fill="none" stroke="#C6F36B" stroke-width="2" opacity="0.5" />
-                <rect x="200" y="120" width="90" height="80" fill="#F7F8F2" opacity="0.1" />
-                <rect x="200" y="120" width="90" height="80" fill="none" stroke="#C6F36B" stroke-width="2" opacity="0.35" />
-                <rect x="320" y="170" width="70" height="30" fill="#C6F36B" opacity="0.85" />
-                <circle cx="120" cy="175" r="14" fill="#C6F36B" />
-                <rect x="112" y="188" width="16" height="26" rx="6" fill="#C6F36B" />
-                <circle cx="245" cy="150" r="12" fill="#F7F8F2" opacity="0.85" />
-                <rect x="238" y="162" width="14" height="24" rx="5" fill="#F7F8F2" opacity="0.85" />
-              </svg>
+              <span class="feature__num">02</span>
               <span class="feature__badge">Sorotan</span>
             </div>
             <div class="feature__body">
@@ -356,7 +351,7 @@
               </p>
               <a class="link-arrow" href="#kalender">
                 <span>Lihat kalender akademik</span>
-                <span class="arrow" aria-hidden="true">→</span>
+                <i class="mdi mdi-arrow-right arrow" aria-hidden="true"></i>
               </a>
             </div>
           </article>
@@ -370,7 +365,7 @@
                 <h3 class="post__title">Beasiswa prestasi akademik dibuka hingga akhir bulan</h3>
                 <p class="post__desc">Persiapkan transkrip dan esai motivasi sebelum tenggat.</p>
               </div>
-              <span class="arrow post__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right arrow post__arrow" aria-hidden="true"></i>
             </article>
 
             <article class="post" data-category="kegiatan" data-reveal>
@@ -380,7 +375,7 @@
                 <h3 class="post__title">Pekan olahraga antar jurusan kembali digelar</h3>
                 <p class="post__desc">Pendaftaran tim per angkatan dibuka di Student Center.</p>
               </div>
-              <span class="arrow post__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right arrow post__arrow" aria-hidden="true"></i>
             </article>
 
             <article class="post" data-category="akademik" data-reveal>
@@ -390,7 +385,7 @@
                 <h3 class="post__title">Jadwal asistensi laboratorium diperbarui</h3>
                 <p class="post__desc">Cek perubahan jam dan ruang sebelum datang ke lab.</p>
               </div>
-              <span class="arrow post__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right arrow post__arrow" aria-hidden="true"></i>
             </article>
 
             <article class="post" data-category="beasiswa" data-reveal>
@@ -400,7 +395,7 @@
                 <h3 class="post__title">Kelas persiapan tes bahasa untuk mahasiswa</h3>
                 <p class="post__desc">Kuota terbatas, pendaftaran melalui portal kemahasiswaan.</p>
               </div>
-              <span class="arrow post__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right arrow post__arrow" aria-hidden="true"></i>
             </article>
 
             <article class="post" data-category="kegiatan" data-reveal>
@@ -410,7 +405,7 @@
                 <h3 class="post__title">Pameran karya mahasiswa dibuka untuk umum</h3>
                 <p class="post__desc">Karya tugas akhir dipamerkan di gedung serbaguna.</p>
               </div>
-              <span class="arrow post__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right arrow post__arrow" aria-hidden="true"></i>
             </article>
 
             <article class="post" data-category="akademik" data-reveal>
@@ -420,7 +415,7 @@
                 <h3 class="post__title">Revisi kalender ujian akhir semester</h3>
                 <p class="post__desc">Beberapa tanggal ujian menyesuaikan agenda fakultas.</p>
               </div>
-              <span class="arrow post__arrow" aria-hidden="true">→</span>
+              <i class="mdi mdi-arrow-right arrow post__arrow" aria-hidden="true"></i>
             </article>
           </div>
         </div>

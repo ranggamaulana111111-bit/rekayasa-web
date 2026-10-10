@@ -1,0 +1,22 @@
+services:
+  web:
+    build: .
+    image: tugasweb:latest
+    container_name: tugasweb
+    restart: unless-stopped
+    ports:
+      - "4432:80"
+
+  # Opsional: Cloudflare Tunnel (tanpa buka port / tanpa kelola sertifikat).
+  # Jalankan dengan: docker compose --profile tunnel up -d --build
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: tugasweb-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      - web
+    profiles:
+      - tunnel
