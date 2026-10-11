@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
 .goal-card__index, .life-item__index, .feature__num,
 .post__date, .timeline__date, .timeline__marker,
 .schedule__day, .schedule__time, .spotlight__mark,
-.calendar__head, .info-panel__value, .agenda__time {
+.calendar__head, .info-panel__value {
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1, "lnum" 1;
 }
@@ -398,30 +398,11 @@ html { scrollbar-color: var(--lime-deep) var(--offwhite); }
 }
 .nav__link::after { content: none; }
 
-.header__side {
-  display: flex;
-  align-items: center;
-  gap: var(--s-5);
-  margin-left: auto;
-}
-
-.term-badge {
-  font-family: var(--font-display);
-  font-size: var(--fs-meta);
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: rgba(247, 244, 236, 0.9);
-  background: rgba(195, 212, 165, 0.16);
-  border-radius: var(--radius-pill);
-  padding: 6px 14px;
-  white-space: nowrap;
-  transition: color var(--transition), background var(--transition);
-}
-
 .nav-toggle {
   display: none;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
   width: 46px; height: 46px;
   border: 1px solid rgba(247, 244, 236, 0.38);
   border-radius: var(--radius-sm);
@@ -532,10 +513,6 @@ html { scrollbar-color: var(--lime-deep) var(--offwhite); }
   color: var(--forest-deep);
   background: var(--surface-2);
 }
-.site-header.is-scrolled .term-badge {
-  color: var(--forest-2);
-  background: rgba(84, 97, 74, 0.10);
-}
 .site-header.is-scrolled .nav-toggle {
   background: var(--surface-2);
   border-color: transparent;
@@ -551,7 +528,6 @@ html { scrollbar-color: var(--lime-deep) var(--offwhite); }
 .site-header:has(.nav-toggle[aria-expanded="true"]) { background: var(--surface); border-bottom: none; }
 .site-header:has(.nav-toggle[aria-expanded="true"]) .brand__text strong { color: var(--ink); }
 .site-header:has(.nav-toggle[aria-expanded="true"]) .brand__text span { color: var(--muted); }
-.site-header:has(.nav-toggle[aria-expanded="true"]) .term-badge { color: var(--forest-2); }
 .site-header:has(.nav-toggle[aria-expanded="true"]) .nav-toggle {
   background: var(--surface-2);
   border-color: transparent;
@@ -646,11 +622,13 @@ section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(var(--s-6), 6vw, var(--s-9));
   padding-block: clamp(36px, 5.5vh, 72px);
   align-items: start;
 }
+
+.hero:not(.hero--center) .hero__lead { max-width: 44rem; }
 
 .hero--center .hero__grid {
   grid-template-columns: minmax(0, 0.92fr);
@@ -719,73 +697,6 @@ section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
   color: rgba(247, 244, 236, 0.88);
   margin-bottom: 6px;
 }
-
-/* Agenda panel — dark clay slab */
-.hero__panel {
-  padding: var(--s-5) var(--s-5) var(--s-5);
-  border-radius: var(--radius-lg);
-  background: rgba(80, 92, 68, 0.78);
-  border: 1px solid rgba(214, 226, 191, 0.14);
-  box-shadow: var(--clay-dark);
-}
-.hero__panel .agenda,
-.hero__panel .agenda__item { border-color: rgba(247, 244, 236, 0.24); }
-.panel__head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--s-4);
-  margin-bottom: var(--s-3);
-}
-.panel__head .label { color: var(--lime); }
-.panel__date {
-  font-family: var(--font-display);
-  font-size: var(--fs-meta);
-  color: rgba(247, 244, 236, 0.88);
-}
-.agenda {
-  border-top: 1px solid var(--line-dark);
-}
-.agenda__item {
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  gap: var(--s-4);
-  padding: var(--s-4) 0;
-  border-bottom: 1px solid var(--line-dark);
-}
-.agenda__time {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--white);
-}
-.agenda__body { display: flex; flex-direction: column; min-width: 0; }
-.agenda__body strong {
-  font-family: var(--font-display);
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.3;
-}
-.agenda__body span {
-  font-size: var(--fs-meta);
-  color: rgba(247, 244, 236, 0.88);
-  margin-top: 2px;
-}
-.panel__foot {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s-2);
-  margin-top: var(--s-4);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: var(--lime);
-  border-bottom: 2px solid var(--lime);
-  padding-bottom: 2px;
-}
-.panel__foot .arrow { transition: transform var(--transition); }
-.panel__foot:hover .arrow { transform: translateX(4px); }
 
 /* =====================================================================
    FACTS — clay tiles
@@ -1722,8 +1633,6 @@ html:not(.js) [data-reveal] { opacity: 1; transform: none; }
 @media (max-width: 640px) {
   :root { --fs-display-page: clamp(1.9rem, 8vw, 2.3rem); }
 
-  .term-badge { display: none; }
-
   .hero__grid { padding-block: clamp(40px, 7vh, 64px); }
   .hero__folio { flex-direction: column; gap: 2px; }
   .stat dt { font-size: 0.72rem; }
@@ -1766,7 +1675,6 @@ html:not(.js) [data-reveal] { opacity: 1; transform: none; }
   .brand__text span { display: none; }
   .post { grid-template-columns: 52px minmax(0, 1fr); gap: var(--s-3); }
   .post__arrow { display: none; }
-  .agenda__item { grid-template-columns: 48px minmax(0, 1fr); gap: var(--s-3); }
   .audience__item { grid-template-columns: minmax(0, 1fr); gap: var(--s-2); }
 }
 
@@ -1796,7 +1704,6 @@ html:not(.js) [data-reveal] { opacity: 1; transform: none; }
   .section__head-grid, .section__head--split { gap: var(--s-5); }
 
   .nav { display: none; }
-  .header__side { margin-left: auto; }
   .nav-toggle { display: inline-flex; }
   .mobile-nav { display: block; }
   .mobile-nav[hidden] { display: none; }
@@ -1830,7 +1737,6 @@ html:not(.js) [data-reveal] { opacity: 1; transform: none; }
 
   .fact, .growth-card, .goal-card, .feature-item,
   .post, .schedule__row, .life-item, .info-row { padding: var(--s-5); }
-  .hero__panel { padding: var(--s-5) var(--s-4); }
   .info-panel, .calendar { padding: var(--s-6) var(--s-5); }
   .data-note { padding: var(--s-4); }
   .growth-card--lg { padding: var(--s-6) var(--s-5); }
@@ -1861,7 +1767,6 @@ html:not(.js) [data-reveal] { opacity: 1; transform: none; }
   .post__arrow { display: none; }
   .schedule__row { padding: var(--s-4); }
   .life-item { padding: var(--s-4) var(--s-5); }
-  .agenda__item { grid-template-columns: 44px minmax(0, 1fr); }
 }
 
 /* Touch devices: no hover-lift stickiness, softer taps */
@@ -1880,3 +1785,23 @@ a, button { -webkit-tap-highlight-color: transparent; }
    component display values. Kept last so source order resolves ties.
    --------------------------------------------------------------------- */
 [hidden] { display: none; }
+
+/* ---------------------------------------------------------------------
+   Flat cards — softly squared corners (7px) across every card component
+   --------------------------------------------------------------------- */
+.fact,
+.feature__visual,
+.post,
+.life-item,
+.growth-card,
+.info-panel,
+.goal-card,
+.audience__item,
+.feature-item,
+.calendar,
+.schedule__row,
+.info-row,
+.data-note,
+.filter-empty {
+  border-radius: 7px;
+}
