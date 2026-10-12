@@ -507,6 +507,10 @@ section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
   color: var(--white);
   overflow: hidden;
   padding: var(--nav-h) 0 var(--hero-cushion);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 .hero--page { --hero-fade-to: #fbf9f3; }
 .hero::after {
@@ -551,7 +555,9 @@ section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(var(--s-6), 6vw, var(--s-9));
   padding-block: clamp(36px, 5.5vh, 72px);
+  align-content: center;
   align-items: start;
+  flex: 1;
 }
 
 .hero:not(.hero--center) .hero__lead { max-width: 44rem; }
