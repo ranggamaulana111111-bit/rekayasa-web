@@ -619,6 +619,22 @@ section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
   place-items: center;
   box-shadow: var(--clay-dark);
 }
+.feature__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Soft top-down scrim so the badge stays legible over the photo */
+.feature__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(38, 46, 31, 0.28) 0%, rgba(38, 46, 31, 0) 45%, rgba(38, 46, 31, 0.42) 100%);
+}
 .feature__badge {
   position: absolute;
   top: var(--s-4);
