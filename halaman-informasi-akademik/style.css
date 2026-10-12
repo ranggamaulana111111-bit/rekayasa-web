@@ -502,7 +502,7 @@ section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
     linear-gradient(180deg, rgba(38, 46, 31, 0.54) 0%, rgba(38, 46, 31, 0.4) 46%, rgba(38, 46, 31, 0.44) 100%),
     url("bukuinet.jpg");
   background-size: cover, cover;
-  background-position: center, center;
+  background-position: center, center 60%;
   background-repeat: no-repeat, no-repeat;
   color: var(--white);
   overflow: hidden;
